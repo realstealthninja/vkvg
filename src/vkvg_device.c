@@ -386,13 +386,13 @@ VkvgDevice vkvg_device_create(vkvg_device_create_info_t *info) {
                                           .pNext                   = pNext};
         dev->vkhDev                    = vkh_device_create(app, pi, &device_info);
 
-        vkh_app_free_phyinfos(phyCount, phys);
-
         info->inst    = vkh_app_get_inst(app);
         info->phy     = vkh_device_get_phy(dev->vkhDev);
         info->vkdev   = vkh_device_get_vkdev(dev->vkhDev);
         info->qFamIdx = pi->gQueue;
         info->qIndex  = 0;
+
+        vkh_app_free_phyinfos(phyCount, phys);
     }
 
     _device_init(dev, info);
