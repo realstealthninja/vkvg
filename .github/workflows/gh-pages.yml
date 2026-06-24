@@ -15,9 +15,9 @@ jobs:
         run: |
           sudo add-apt-repository universe
           sudo apt update
-          sudo apt install graphviz ninja doxygen libvulkan1
+          sudo apt install graphviz cmake doxygen libvulkan1
       - name: configure
-        run: cmake -G Ninja -DVKVG_BUILD_DOCS=ON -B ./build -S .
+        run: cmake -DVKVG_BUILD_DOCS=ON -B ./build -S .
       - name: build
         run: cmake --build build
       - name: gh-pages
