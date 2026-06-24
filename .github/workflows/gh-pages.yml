@@ -13,9 +13,11 @@ jobs:
           submodules: true
       - name: Install requirements
         run: |
+          wget -qO- https://packages.lunarg.com/lunarg-signing-key-pub.asc | sudo tee /etc/apt/trusted.gpg.d/lunarg.asc
+          sudo wget -qO /etc/apt/sources.list.d/lunarg-vulkan-noble.list http://packages.lunarg.com/vulkan/lunarg-vulkan-noble.list
           sudo add-apt-repository universe
           sudo apt update
-          sudo apt install graphviz cmake doxygen libvulkan1
+          sudo apt install graphviz cmake doxygen libvulkan1 vulkan-sdk
       - name: configure
         run: cmake -DVKVG_BUILD_DOCS=ON -B ./build -S .
       - name: build
