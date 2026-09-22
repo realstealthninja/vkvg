@@ -1,8 +1,0 @@
-build/
-*.user
-CMakeLists.txt.user.*
-ignore
-.vs/
-*.json
-log-*.txt
-docs/

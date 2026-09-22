@@ -1,4 +1,0 @@
-Surface
-=======
-
-.. doxygengroup:: surface

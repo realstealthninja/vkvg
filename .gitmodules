@@ -1,9 +1,0 @@
-[submodule "vkh"]
-	path = vkh
-	url = https://github.com/jpbruyere/vkhelpers.git
-[submodule "external/glutess"]
-	path = external/glutess
-	url = https://github.com/jpbruyere/glutess.git
-[submodule "external/vkvg-svg"]
-	path = external/vkvg-svg
-	url = https://github.com/jpbruyere/vkvg-svg.git
